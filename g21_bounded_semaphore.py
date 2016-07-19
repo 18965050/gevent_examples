@@ -26,7 +26,7 @@ def worker2(n):
 		
 def main():
 	pool = Pool()
-	pool.map(worker1, xrange(0, 3))
-	pool.map(worker2, xrange(3, 6))
+	pool.map(worker1, range(0, 3))
+	pool.map(worker2, range(3, 6))
 
 if __name__ == '__main__': main()

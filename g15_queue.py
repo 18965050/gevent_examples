@@ -13,7 +13,7 @@ item will not grabbed by another Greenlet executing simultaneously.
 tasks = Queue()
 
 def boss():
-	for i in xrange(1, 25):
+	for i in range(1, 25):
 		tasks.put_nowait(i)
 
 def worker(n):

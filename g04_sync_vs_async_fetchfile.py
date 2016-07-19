@@ -5,10 +5,11 @@ gevent.monkey.patch_socket()
 Illustrates synchronous vs asynchronous fetching of a remote file via urllib2
 '''
 
-import gevent, urllib2, simplejson as json
+import gevent,  simplejson as json
+from urllib.request import urlopen
 
 def fetch(pid):
-	response = urllib2.urlopen('http://json-time.appspot.com/time.json')
+	response = urlopen('http://json-time.appspot.com/time.json')
 	result = response.read()
 	json_result = json.loads(result)
 	datetime = json_result['datetime']

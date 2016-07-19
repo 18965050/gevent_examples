@@ -7,6 +7,7 @@ group = Group()
 def hello_from(n):
 	print('Size of group {0}'.format(len(group)))
 	print('Hello from greenlet id: {0}'.format(id(getcurrent())))
+	print('task'+n)
 
 def intensive(n):
 	gevent.sleep(3 - n)
@@ -14,16 +15,16 @@ def intensive(n):
 
 def main():
 	
-	group.map(hello_from, xrange(3))
+	group.map(hello_from, range(3))
 	
 	print('Ordered')
 	ogroup = Group()
-	for i in ogroup.imap(intensive, xrange(3)):
+	for i in ogroup.imap(intensive, range(3)):
 		print(i)
 	
 	print('Unordered')
 	igroup = Group()
-	for i in igroup.imap_unordered(intensive, xrange(3)):
+	for i in igroup.imap_unordered(intensive, range(3)):
 		print(i)
 	
 

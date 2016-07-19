@@ -18,7 +18,7 @@ def waiter():
 	After 3 seconds the get call will unblock after the setter
 	sets a value on the AsyncResult
 	"""
-	print a.get()
+	print (a.get())
 
 def main():
 	gevent.joinall([

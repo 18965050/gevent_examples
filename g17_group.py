@@ -6,7 +6,7 @@ Illustrates the basic usage of Group
 '''
 
 def talk(msg):
-	for i in xrange(3):
+	for i in range(3):
 		print(msg)
 		
 def main():
@@ -16,10 +16,10 @@ def main():
 	
 	group = Group()
 	group.add(g1)
-	group.add(g1)
-	group.join()	
+	group.add(g2)
+	group.join()
 	
-	group.add(g1)
+	group.add(g3)
 	group.join()
 
 if __name__ == '__main__': main()

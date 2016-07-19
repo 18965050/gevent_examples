@@ -23,11 +23,11 @@ def boss():
 	Boss will wait to hand out jobs until an individual worker
 	is free since th maxsize of the task queue is 3
 	"""
-	for i in xrange(1, 10):
+	for i in range(1, 10):
 		tasks.put(i)
 	print('Assigned all tasks for the first iteration')
 	
-	for i in xrange(10, 20):
+	for i in range(10, 20):
 		tasks.put(i)
 	print('assigned all tasks for the 2nd iteration')
 	

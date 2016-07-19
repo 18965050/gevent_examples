@@ -23,7 +23,7 @@ def main():
 	thread2 = gevent.spawn(foo, 'Word up!', 2)
 	
 	# Lambda expression instead of named function
-	thread3 = gevent.spawn(lambda x: (x + 1), 2)
+	thread3 = gevent.spawn(lambda x: print(x + 1), 2)
 	
 	threads = [thread1, thread2, thread3]
 	

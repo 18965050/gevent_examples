@@ -18,7 +18,7 @@ def synchronous():
 		task(i)
 
 def asynchronous():
-	threads = [gevent.spawn(task, i) for i in xrange(10)]
+	threads = [gevent.spawn(task, i) for i in range(10)]
 	gevent.joinall(threads)
 	
 def main():
