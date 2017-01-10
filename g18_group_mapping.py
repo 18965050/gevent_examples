@@ -7,7 +7,7 @@ group = Group()
 def hello_from(n):
 	print('Size of group {0}'.format(len(group)))
 	print('Hello from greenlet id: {0}'.format(id(getcurrent())))
-	print('task'+n)
+	print('task'+ str(n) )
 
 def intensive(n):
 	gevent.sleep(3 - n)

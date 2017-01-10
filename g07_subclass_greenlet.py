@@ -9,6 +9,7 @@ class MyGreenlet(Greenlet):
 	
 	def __init__(self, message, n):
 		Greenlet.__init__(self)
+		# super().__init__()        # 也可以写成这样
 		self.message = message
 		self.n = n
 		
